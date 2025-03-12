@@ -1,0 +1,89 @@
+import React from 'react';
+
+import { Contactor } from './Contactor';
+import { Controls } from './Controls';
+import { Dimensions } from './Dimensions';
+import { Fuse } from './Fuse';
+import { Letter } from './Letter';
+import { Voltage } from './Voltage';
+
+export const Left = () => {
+  return (
+    <>
+      <Contactor
+        text={'A'}
+        number={'1'}
+      />
+      <Contactor
+        text={'B'}
+        number={'2'}
+      />
+      <Contactor
+        text={'C'}
+        number={'3'}
+      />
+      <Contactor
+        text={'A'}
+        number={'4'}
+      />
+      <Contactor
+        text={'B'}
+        number={'5'}
+      />
+      <Contactor
+        text={'C'}
+        number={'6'}
+      />
+      <Dimensions
+        number={'1'}
+        color={'red'}
+        title={'Вечер'}
+      />
+      <Dimensions
+        number={'2'}
+        color={'green'}
+        title={'Ночь'}
+      />
+      <Voltage
+        number={'1'}
+        ampere={'21'}
+        volt={'12'}
+      />
+      <Voltage
+        number={'2'}
+        ampere={'33'}
+        volt={'44'}
+      />
+      <Voltage
+        number={'3'}
+        ampere={'55'}
+        volt={'11'}
+      />
+      <Fuse
+        number={'1'}
+        variant={'active'}
+      />
+      <Fuse
+        number={'2'}
+        variant={'active'}
+      />
+      <Fuse
+        number={'3'}
+        variant={'active'}
+      />
+      <Letter
+        number={'1'}
+        text={'A'}
+      />
+      <Letter
+        number={'2'}
+        text={'B'}
+      />
+      <Letter
+        number={'3'}
+        text={'C'}
+      />
+      <Controls />
+    </>
+  );
+};

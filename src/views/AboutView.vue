@@ -3,12 +3,14 @@
     <h1>This is an about page</h1>
     <TheForm />
     <Notifications message="Notifgy!" type="error" />
+    <GuessAge title="Guess Age" />
   </div>
 </template>
 
 <script setup lang="ts">
 import TheForm from '@/components/TheForm.vue'
 import Notifications from '@/components/Notifications.vue'
+import GuessAge from '@/components/GuessAge.vue'
 </script>
 
 <style>

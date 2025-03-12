@@ -1,9 +1,21 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { computed } from 'vue'
+import ProductCard from '@/components/ProductCard.vue'
+import ProductCardSkeleton from '@/components/ProductCardSkeleton.vue'
+import { useProductStore } from '@/stores/products'
+import TheWelcome from '@/components/TheWelcome.vue'
+
+const productStore = useProductStore()
+
+const products = computed(() => productStore.list)
 </script>
 
 <template>
-  <main>
+  <div class="p-4 max-w-7xl mx-auto">
     <TheWelcome />
-  </main>
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <ProductCardSkeleton v-for="n in 15" v-show="!productStore.loaded" :key="n" />
+      <ProductCard v-for="product in products" :key="product.id" :product="product" />
+    </div>
+  </div>
 </template>

@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: anc95/ChatGPT-CodeReview@v1.0.11
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: Russian
           OPENAI_API_ENDPOINT: https://api.proxyapi.ru/openai/v1

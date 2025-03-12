@@ -1,0 +1,18 @@
+.table-centred-cell {
+  height: 100%;
+  .Mui-TableHeadCell-Content {
+    display: flex;
+    height: 74px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.table-start-cell {
+  height: 100%;
+  .Mui-TableHeadCell-Content {
+    display: flex;
+    height: 74px;
+    align-items: center;
+    justify-content: start;
+  }
+}

@@ -1,15 +1,70 @@
-/* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
-
 module.exports = {
-  root: true,
-  'extends': [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting'
-  ],
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['plugin:react/recommended'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest'
-  }
-}
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint', "simple-import-sort", "import", "prettier"],
+  rules: {
+    'max-len': ['error', 2000, 4, { ignoreUrls: true }],
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'no-unused-vars': 'off',
+    'react/require-default-props': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': 'off',
+    "react/display-name": 'off',
+    'no-shadow': 'off',
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'no-underscore-dangle': 'off',
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-shadow": "off",
+    "no-console": "warn",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-restricted-exports": "off",
+    "react/no-danger": "off",
+    "react/jsx-key": "error",
+    "react/no-unstable-nested-components": "error",
+    "react/jsx-no-useless-fragment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/prop-types": "off",
+    "arrow-body-style": "off",
+    "object-shorthand": "warn",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-extra-boolean-cast": "off",
+    "no-restricted-syntax": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+};

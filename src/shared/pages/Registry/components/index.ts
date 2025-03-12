@@ -1,0 +1,1 @@
+export { RegistryItem } from './RegistryItem';
